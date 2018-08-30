@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Road trip</title>
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+
+</head>
+<body>
+<!-- sidebar menu 
+        <div class="sidenav">
+                <a href="klasprojectweek1.html">Home</a>
+                <a href="about.html">About</a>
+              <!-- <li> <a href="#">Clients</a> </li>
+                  <ul>
+                    <li><a href=#> client 1</a></li>
+                    <li><a href=#> client 2</a></li>
+                  </ul>
+                <a href="#">Contact</a>-->
+            </div>
+<script>
+    places= [
+        {area: 'Antelope canyon', information: 'The curves and hollows vary from one to 3 m Wide up to 50m deep. The upper antelope Canyon is called "the crack" but the Navajo know it as Tsé bighánílíní (" the place where water runs trough rocks"). Light beams start to peek into the canyon March 20 and disappear October 7 each year.'}
+    ]
+
+function renderPlace(place){
+     var div = document.createElement('div')
+     var h1 = document.createElement('h1')
+     var p = document.createElement('p')
+
+        div.appendChild(h1)
+        div.appendChild(p)
+
+     var area = document.createTextNode(place.area)
+     var information = document.createTextNode(place.information)
+
+        h1.appendChild(area)
+        p.appendChild(information)
+
+        return div
+    }
+
+function renderPlaces(places){
+     var div = document.createElement('div')
+        for(var i = 0;i < places.length; i= i +1){
+                var place =places[i]
+                var component = renderPlace(place)
+                div.appendChild(component)
+             }
+        return div
+}
+
+document.body.appendChild(renderPlaces(places))
+
+</script>    
+</body>
+</html>
