@@ -25,7 +25,8 @@
         {area: 'Antelope canyon', information: 'The curves and hollows vary from one to 3 m Wide up to 50m deep. @@@ The upper antelope Canyon is called "the crack" but the Navajo know it as Tsé bighánílíní (" the place where water runs trough rocks"). @@@ Light beams start to peek into the canyon March 20 and disappear October 7 each year.'}
     ]
     function splitString(information) {
-        return information.split('@@@')
+     var information = place.information
+     var ar = information.split('@@@')
     }
 
 function renderPlace(place){
