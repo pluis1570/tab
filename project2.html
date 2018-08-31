@@ -5,34 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Road trip</title>
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styling.Css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.2/tabletop.min.js"></script>
+
+    
 
 </head>
 <body>
-<!-- sidebar menu 
-        <div class="sidenav">
-                <a href="klasprojectweek1.html">Home</a>
-                <a href="about.html">About</a>
-              <!-- <li> <a href="#">Clients</a> </li>
-                  <ul>
-                    <li><a href=#> client 1</a></li>
-                    <li><a href=#> client 2</a></li>
-                  </ul>
-                <a href="#">Contact</a>-->
-            </div>
 <script>
-    places= [
+   /* places= [
         {area: 'Antelope canyon', information: 'The curves and hollows vary from one to 3 m Wide up to 50m deep. @@@ The upper antelope Canyon is called "the crack" but the Navajo know it as Tsé bighánílíní (" the place where water runs trough rocks"). @@@ Light beams start to peek into the canyon March 20 and disappear October 7 each year.'},
         {area: 'Sequoia national Park', information: 'They have the thickest bark on earth. @@@ They can live to be really, really old! The oldest is around 3200 years old. @@@ Theyre resistant to disease. Yealous yet? '},
         {area: 'Balboa Park', information: 'Its original name was " City Park" @@@ Did you know Balboa park is bigger then Central Park @@@ The parks buildings were used by the military during WW1 and 2'},
-    ]
-    
-    function splitString(information) {
-     var information = place.information
-     var ar = information.split('@@@')
-    
-    console.log('ar')
-    }
+    ]*/
+   
 
 function renderPlace(place){
      var div = document.createElement('div')
@@ -61,7 +47,21 @@ function renderPlaces(places){
         return div
 }
 
-document.body.appendChild(renderPlaces(places))
+
+function init() {
+   Tabletop.init({
+key: 'https://docs.google.com/spreadsheets/d/19c5VxyfV5P3-4jUwramk5fiyFLm4IPGqqLqo8_6f7-o/pubhtml',
+   callback: function (tabletopData, tabletop) {
+    var renderPlaces = renderPlaces(tabletopData)
+     console.log(renderPlaces)
+     document.getElementById("div").appendChild(renderPlaces)
+   },
+
+   simpleSheet: true
+ })
+}
+
+window.addEventListener('DOMContentLoaded', init)
 
 </script>    
 </body>
