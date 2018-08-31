@@ -22,11 +22,16 @@
             </div>
 <script>
     places= [
-        {area: 'Antelope canyon', information: 'The curves and hollows vary from one to 3 m Wide up to 50m deep. @@@ The upper antelope Canyon is called "the crack" but the Navajo know it as Tsé bighánílíní (" the place where water runs trough rocks"). @@@ Light beams start to peek into the canyon March 20 and disappear October 7 each year.'}
+        {area: 'Antelope canyon', information: 'The curves and hollows vary from one to 3 m Wide up to 50m deep. @@@ The upper antelope Canyon is called "the crack" but the Navajo know it as Tsé bighánílíní (" the place where water runs trough rocks"). @@@ Light beams start to peek into the canyon March 20 and disappear October 7 each year.'},
+        {area: 'Sequoia national Park', information: 'They have the thickest bark on earth. @@@ They can live to be really, really old! The oldest is around 3200 years old. @@@ Theyre resistant to disease. Yealous yet? '},
+        {area: 'Balboa Park', information: 'Its original name was " City Park" @@@ Did you know Balboa park is bigger then Central Park @@@ The parks buildings were used by the military during WW1 and 2'},
     ]
+    
     function splitString(information) {
      var information = place.information
      var ar = information.split('@@@')
+    
+    console.log('ar')
     }
 
 function renderPlace(place){
